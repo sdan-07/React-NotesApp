@@ -13,7 +13,7 @@ const App = () => {
   // data.push({title, desc})
 
   return (
-    <div className="parent flex flex-col md:flex-row m-7 p-4 ">
+    <div className="parent flex flex-col md:flex-row m-7 p-4 md:scale-95 ">
       <div className="note-form mr-0 md:mr-12">
         <h1 className="flex justify-center text-2xl md:text-3xl">Your Notes</h1>
 
@@ -48,7 +48,7 @@ const App = () => {
               setDesc(e.target.value);
             }}
           />
-          <button className="px-3 py-3 md:py-5 bg-white text-black text-sm md:text-lg active:scale-95 rounded-xl border-2 my-9 md:my-12 w-full">
+          <button className="px-3 py-3 md:py-4.5 bg-white text-black text-sm md:text-lg active:scale-95 rounded-xl border-2 my-9 md:my-12 w-full">
             
             Submit
           </button>
@@ -58,7 +58,7 @@ const App = () => {
       <hr className="h-0 md:h-screen border-2 mt-4 md:mt-0" />
       
 
-      <div className="show-notes md:ml-10">
+      <div className="show-notes md:ml-12">
         <h1 className="mt-6 text-2xl md:text-3xl">Recent Notes</h1>
 
         <div className="mt-12 grid gap-8 justify-center grid-cols-1 md:grid-cols-3">
