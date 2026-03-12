@@ -1,6 +1,5 @@
-import React from "react";
-
 const DisplayNotes = ({title, desc}) => {
+
   return (
     <>
       <div className="note p-4 rounded-2xl bg-gray-300 text-black">
