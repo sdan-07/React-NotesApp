@@ -1,7 +1,7 @@
-# 📝 Notes App (React)
+# 📝 Notely App
 
-A simple and responsive **Notes App UI** built using **React.js**.  
-This project focuses on core React concepts like **useState** and **props**, styled with **Tailwind CSS**, and deployed live on **Vercel**.
+A simple and responsive Notes application built using **MERN Stack**.  
+This project focuses on core **Backend and Frontend concepts using JavaScript**, styled with **Tailwind CSS**, and deployed live on **Vercel**.
 
 ---
 
@@ -14,8 +14,8 @@ This project focuses on core React concepts like **useState** and **props**, sty
 ## 🛠️ Tech Stack
 
 - ⚛️ **React.js**
-- 🎯 **useState Hook**
-- 🔁 **Props**
+- 🎯 **MongoDB**
+- 🔁 **Express.js**
 - 🎨 **Tailwind CSS**
 - 🌐 **Vercel (Deployment)**
 
@@ -24,8 +24,8 @@ This project focuses on core React concepts like **useState** and **props**, sty
 ## ✨ Features
 
 - ➕ Add notes with title and description
-- 📱 Fully responsive UI
-- ⚡ Fast and smooth performance
+- 📱 Operations include addition and deletion
+- ⚡  Fast and smooth performance
 - 🎨 Clean and modern design using Tailwind CSS
 - 🧩 Component-based architecture
 
@@ -49,24 +49,18 @@ project/
 
 ---
 
-## ▶️ Live Site
-
-The project is live and deployed here:
-
-👉 [**https://react-cards-ui-chi.vercel.app/**](https://react-cards-ui-chi.vercel.app/)
-
----
-
 ##  What I Learned
 
 - Managing state using **useState**
 - Passing and handling data with **props**
 - Creating reusable React components
-- Building responsive layouts with **Tailwind CSS**
-- Deploying a React app on **Vercel**
+- Creating **REST APIs** in Express.js
+- Maintaining a NoSQL database, MongoDB 
+- Integrating frontend with backend using **axios**
+- Deploying this application on **Vercel**
 
 ---
 
 ## 🙌 Acknowledgements
 
-This project was created as a simple practice UI to improve skills in **ReactJS**, **TailwindCSS**, and component-based design.
+This project was created as a simple practice to improve skills in building basic full stack application.
