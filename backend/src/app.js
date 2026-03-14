@@ -50,6 +50,4 @@ app.delete('/delete-all', async(req,res)=>{
     }
 })
 
-
-//testing deploymentt
 module.exports = app
