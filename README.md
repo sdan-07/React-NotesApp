@@ -7,7 +7,7 @@ This project focuses on core **Backend and Frontend concepts using JavaScript**,
 
 ## 🚀 Live Demo
 
-🔗 **Live Site:** https://your-vercel-link.vercel.app
+🔗 **Live Site:** https://react-notes-app-omega-red.vercel.app/
 
 ---
 
