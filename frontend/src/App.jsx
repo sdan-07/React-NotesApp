@@ -3,14 +3,15 @@ import DisplayNotes from "./components/DisplayNotes";
 import axios from "axios";
 import { useEffect } from "react";
 
-const App = () => {
+const App = ({ baseUrl }) => {
   const [title, setTitle] = useState(``);
   const [description, setDescription] = useState(``);
 
   const [notes, setNotes] = useState([]);
 
   const fetchNotes = async () => {
-    await axios.get("http://localhost:3000/notelies").then((res) => {
+    await axios.get(`${baseUrl}/notelies`)
+    .then((res) => {
       console.log(res.data);
       setNotes(res.data.notes);
     });
@@ -20,7 +21,7 @@ const App = () => {
     e.preventDefault();
 
     await axios
-      .post("http://localhost:3000/create-note", {
+      .post(`${baseUrl}/create-note`, {
         title: title,
         description: description,
       })
@@ -40,7 +41,7 @@ const App = () => {
   return (
     <div className="parent flex flex-col md:flex-row m-7 p-4 md:scale-95 ">
       <div className="note-form mr-0 md:mr-12">
-        <h1 className="flex justify-center text-2xl md:text-3xl">Your Notes</h1>
+        <h1 className="font1 flex justify-center text-[42px] md:text-5xl italic mb-4">Notely</h1>
 
         <form onSubmit={handleSubmit}>
           <input
@@ -68,7 +69,7 @@ const App = () => {
           />
           <button
             type="submit"
-            className="px-3 py-3 md:py-4.5 bg-white text-black text-sm md:text-lg active:scale-95 rounded-xl border-2 my-9 md:my-12 w-full"
+            className="px-3 py-3 md:py-4.5 bg-white text-black text-sm md:text-lg active:scale-95 rounded-xl border-2 my-9 md:my-12 w-full cursor-pointer hover:bg-slate-200"
             onSubmit={fetchNotes}
           >
             Submit
@@ -76,19 +77,19 @@ const App = () => {
         </form>
       </div>
 
-      <hr className="h-0 md:h-screen border-2 mt-4 md:mt-0" />
-
-      <div className="show-notes md:ml-12">
+      <hr className="h-0 md:h-screen border-2 mt-4 md:mt-0 hidden" />
+      
+      <div className="show-notes md:ml-12 lg:w-[75vw]">
         <div className="flex justify-between ">
-          <h1 className="mt-6 text-2xl md:text-3xl">Recent Notes</h1>
+          <h1 className="mt-6 font-medium! text-2xl md:text-3xl italic">Your Notes</h1>
           <button 
           type="button" 
           onClick={async()=>{
             const confirmed = window.confirm('Are you sure you want to delete all notes?')
             if(confirmed){
-              await axios.delete(`http://localhost:3000/delete-all`)
+              await axios.delete(`${baseUrl}/delete-all`)
                 .then((res)=>{
-                  window.location.reload();
+                  fetchNotes();
                 })
               } 
             }
@@ -126,4 +127,3 @@ const App = () => {
 };
 
 export default App;
-//            return

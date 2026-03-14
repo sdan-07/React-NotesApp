@@ -2,9 +2,8 @@ const express = require('express')
 const app = express()
 const noteModel = require('./models/notely.model')
 const cors = require('cors')
-app.use(cors())
 app.use(express.json())
-
+app.use(cors())
 
 app.post('/create-note', async(req,res)=>{
     try{
