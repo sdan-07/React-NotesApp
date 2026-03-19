@@ -10,7 +10,7 @@ const App = ({ baseUrl }) => {
   const [notes, setNotes] = useState([]);
 
   const fetchNotes = async () => {
-    await axios.get(`${baseUrl}/notelies`)
+    await axios.get(`${baseUrl}/api/note/fetch-notes`)
     .then((res) => {
       console.log(res.data);
       setNotes(res.data.notes);
@@ -21,7 +21,7 @@ const App = ({ baseUrl }) => {
     e.preventDefault();
 
     await axios
-      .post(`${baseUrl}/create-note`, {
+      .post(`${baseUrl}/api/note/create-note`, {
         title: title,
         description: description,
       })
@@ -87,7 +87,7 @@ const App = ({ baseUrl }) => {
           onClick={async()=>{
             const confirmed = window.confirm('Are you sure you want to delete all notes?')
             if(confirmed){
-              await axios.delete(`${baseUrl}/delete-all`)
+              await axios.delete(`${baseUrl}/api/note/delete-all`)
                 .then((res)=>{
                   fetchNotes();
                 })
