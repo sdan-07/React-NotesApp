@@ -36,16 +36,21 @@ This project focuses on core **Backend and Frontend concepts using JavaScript**,
 ```
 project/
 ├── backend/
+│   ├── node_modules/
 │   ├── src/
+│   │   ├── controllers/
+│   │   │   └── note.controller.js
 │   │   ├── db/
 │   │   │   └── db.js
-│   │   └── models/
-│   │       └── notely.model.js
-│   ├── app.js
-│   ├── server.js
+│   │   ├── models/
+│   │   │   └── notely.model.js
+│   │   ├── routes/
+│   │   │   └── note.route.js
+│   │   └── app.js
 │   ├── .env
 │   ├── package.json
-│   └── package-lock.json
+│   ├── package-lock.json
+│   └── server.js
 │
 ├── frontend/
 │   ├── dist/
