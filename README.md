@@ -35,17 +35,37 @@ This project focuses on core **Backend and Frontend concepts using JavaScript**,
 
 ```
 project/
-├── src/
-│   ├── components/
-│   │   ├── CreateNotes.jsx
-│   │   └── DisplayNotes.jsx
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css
-├── public/
-├── package.json
+├── backend/
+│   ├── src/
+│   │   ├── db/
+│   │   │   └── db.js
+│   │   └── models/
+│   │       └── notely.model.js
+│   ├── app.js
+│   ├── server.js
+│   ├── .env
+│   ├── package.json
+│   └── package-lock.json
+│
+├── frontend/
+│   ├── dist/
+│   ├── node_modules/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   │   └── DisplayNotes.jsx
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── .env
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   └── vite.config.js
+│
+├── .gitignore
 └── README.md
-```
 
 ---
 
